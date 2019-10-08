@@ -3,6 +3,8 @@ import torch
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  # sets device for model and PyTorch tensors
 
 wav_folder = 'data/train/segmented/wavn'
+tran_file = 'data/prompts.gui'
+data_file = 'data/blizzard_2013.pkl'
 
 vocab = 'abcdefghijklmnopqrstuvwxyz12345 '
 vocab_size = len(vocab)
@@ -10,9 +12,6 @@ idx_to_char = {i: vocab[i] for i in range(0, len(vocab))}
 char_to_idx = {vocab[i]: i for i in range(0, len(vocab))}
 
 unk_id = 0
-
-thchs30_folder = 'data/data_thchs30'
-data_file = 'data/data_thchs30.pkl'
 
 ################################
 # Experiment Parameters        #
