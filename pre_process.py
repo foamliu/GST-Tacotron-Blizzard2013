@@ -13,7 +13,7 @@ def get_blizzard_2013():
         lines = file.readlines()
 
     num_lines = len(lines)
-    for i in range(0, num_lines, step=3):
+    for i in range(0, num_lines, 3):
         filename = lines[i]
         filename = ''.format(filename)
         text = lines[i+1]
